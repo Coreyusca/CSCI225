@@ -23,6 +23,23 @@ body{
 
 }
 
+#introduction{
+position: relative;
+top: 10px;
+left: 10px;
+}
+#Portfolio{
+position: relative;
+top: 10px;
+left: 100px; 
+}
+
+#Assignment{
+position: relative;
+top: 70px;
+left: 10px; 
+}
+}
 
 
 
