@@ -1,0 +1,27 @@
+:root{
+
+--img-shrine: url('../img/shrine.png');
+
+}
+
+
+
+
+/* specify the color for h3, using variables */
+
+
+body{
+    background-image: var(--img-shrine);
+    position:fixed;
+    left: 10%;
+    bottom: 20px;
+    width: 70%;
+    height: 100vh;
+    
+   
+
+}
+
+
+
+
