@@ -5,31 +5,70 @@
 }
 
 
-
+.box {
+    position: absolute;
+    width: 280px;
+    text-align: center;
+}
 
 /* specify the color for h3, using variables */
 
 
 body{
-    background-image: var(--img-shrine);
-    position:fixed;
-    left: 10%;
-    bottom: 20px;
-    width: 70%;
-    height: 100vh;
-    border: 7px solid red;
+     background-image: var(--img-shrine);
+    position:relative;
     background-size: cover;
-background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    /* adjust left, top, width, height, and the board in the middle*/
    
-
+    /* Required: get the board frame */
+    border: 7px solid var(red);
+  
 }
+h2{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+   }
+
+
 .lower-text{
     display:none;
+    
 }
 h2:hover{
     
 opacity: 0;
 
+}
+* {
+    box-sizing: border-box;
+}
+nav {
+    height: 45px;
+    background: #d65f3d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #f5c995;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: white;
+}
+.box h2{
+ margin-top: 10px;
+    font-size: 27px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    cursor: pointer;
 }
 h2:active {
 display: none;
@@ -38,7 +77,7 @@ h2:active+.lower-text {
 display: block;
 }
 
-#introduction{
+#Introduction{
 position: relative;
 top: 100px;
 left: 10px;
@@ -46,20 +85,96 @@ left: 10px;
 }
 #Portfolio{
 position: relative;
-top: -150px;
-left: 1000px;   
+top: 100px;
+left: 1500px;   
 }
 #Schedule{
 position: relative;
-top: 100px;
-left: 1000px;  
+top: 500px;
+left: 1300px;  
 }
 #Assignment{
 position: relative;
-top: 10px;
-left: 10px; 
+top: 500px;
+left: 550px; 
+}
+main{
+ min-height: 650px;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.65),
+            rgba(255,255,255,.65)
+        ),
+        url("shrine.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+table {
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.9);
+    width: 500px;
+
+    position: relative;
+    left: 400px;
+    bottom: -70px;
 }
 
+th {
+    background: #dc9864;
+    color: white;
+}
 
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 13px;
+}
+#ul{
+    position: relative;
+    top: 130px;
+    left: 1500px; 
+}
 
+/* Blue lines */
+.line {
+    width: 100%;
+    height: 6px;
+    background: #5f8ca4;
+}
+footer{
+    position: fixed;
+    top: 100;
+    left: 0 ;
+    width: 100%; 
+    display: flex; /* make it horizontal */
+    gap: 8px;
+    padding: 10px;
+    animation: horizontalmove 5s linear infinite;
 
+}
+footer a{
+    background-color: cornflowerblue;
+    text-decoration: none;
+}
+@keyframes horizontalmove{
+    0%{transform: translateX(0);}
+    50%{transform: translateX(100%);}
+    100%{transform: translateX(0);}
+    
+}
+#ol{
+position: relative;
+top: 550px;
+left: 550px; 
+}
+
+p{
+    color: orangered; 
+    font-weight: 100;
+
+}
