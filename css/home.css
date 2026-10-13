@@ -1,6 +1,7 @@
-:root{
-
---img-shrine: url('../img/shrine.png');
+:root {
+    --main-color: orangered;
+    --footer-color: cornflowerblue;
+    --img-shrine: url('../img/shrine.png');
 
 }
 
@@ -14,36 +15,48 @@
 /* specify the color for h3, using variables */
 
 
-body{
-     background-image: var(--img-shrine);
-    position:relative;
+body {
+    background-image: var(--img-shrine);
+    position: relative;
     background-size: cover;
     background-repeat: no-repeat;
-    /* adjust left, top, width, height, and the board in the middle*/
-   
-    /* Required: get the board frame */
-    border: 7px solid var(red);
-  
-}
-h2{
+    border: 7px solid (red);
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #333;
-   }
-
-
-.lower-text{
-    display:none;
-    
-}
-h2:hover{
-    
-opacity: 0;
 
 }
+
+h2 {
+    margin: 0;
+    border: 7px solid (red);
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    color: orangered;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    transition: opacity 0.5s;
+    font-weight: 100;
+}
+
+h2.a {
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+
+
+.lower-text {
+    display: none;
+
+}
+
+h2:hover {
+
+    opacity: 0;
+
+}
+
 * {
     box-sizing: border-box;
 }
+
 nav {
     height: 45px;
     background: #d65f3d;
@@ -58,54 +71,54 @@ nav a {
     color: #f5c995;
     text-decoration: none;
     font-size: 14px;
+    transition: color 0.3s;
 }
 
 nav a:hover {
     color: white;
 }
-.box h2{
- margin-top: 10px;
-    font-size: 27px;
-    font-weight: normal;
-    letter-spacing: 1px;
-    cursor: pointer;
-}
+
+
+
 h2:active {
-display: none;
+    display: none;
 }
+
 h2:active+.lower-text {
-display: block;
+    display: block;
 }
 
-#Introduction{
-position: relative;
-top: 100px;
-left: 10px;
+#Introduction {
+    position: relative;
+    top: 100px;
+    left: 10px;
 
 }
-#Portfolio{
-position: relative;
-top: 100px;
-left: 1500px;   
+
+#Portfolio {
+    position: relative;
+    top: 100px;
+    left: 1500px;
 }
-#Schedule{
-position: relative;
-top: 500px;
-left: 1300px;  
+
+#Schedule {
+    position: relative;
+    top: 500px;
+    left: 1300px;
 }
-#Assignment{
-position: relative;
-top: 500px;
-left: 550px; 
+
+#Assignment {
+    position: relative;
+    top: 500px;
+    left: 550px;
 }
-main{
- min-height: 650px;
+
+main {
+    min-height: 650px;
 
     background-image:
-        linear-gradient(
-            rgba(255,255,255,.65),
-            rgba(255,255,255,.65)
-        ),
+        linear-gradient(rgba(255, 255, 255, .65),
+            rgba(255, 255, 255, .65)),
         url("shrine.jpg");
 
     background-size: cover;
@@ -113,6 +126,7 @@ main{
 
     position: relative;
 }
+
 table {
     border-collapse: collapse;
     background: rgba(255, 255, 255, 0.9);
@@ -121,6 +135,8 @@ table {
     position: relative;
     left: 400px;
     bottom: -70px;
+    border: 1px solid #ccc;
+    empty-cells: show;
 }
 
 th {
@@ -133,11 +149,19 @@ td {
     border: 1px solid #ccc;
     padding: 10px;
     font-size: 13px;
+    vertical-align: middle;
 }
-#ul{
+
+tr:nth-child(even) {
+    background-color: #f5e1d2;
+}
+
+#ul {
     position: relative;
     top: 130px;
-    left: 1500px; 
+    left: 1500px;
+    box-shadow: -25px -25px 50px dimgrey;
+
 }
 
 /* Blue lines */
@@ -146,35 +170,88 @@ td {
     height: 6px;
     background: #5f8ca4;
 }
-footer{
+
+footer {
     position: fixed;
     top: 100;
-    left: 0 ;
-    width: 100%; 
-    display: flex; /* make it horizontal */
+    left: 0;
+    width: 100%;
+    display: flex;
+    /* make it horizontal */
     gap: 8px;
     padding: 10px;
+    background-color: #d65f3d;
     animation: horizontalmove 5s linear infinite;
 
 }
-footer a{
-    background-color: cornflowerblue;
+
+footer a {
+    background-color: var(--footer-color);
+    color: white;
     text-decoration: none;
-}
-@keyframes horizontalmove{
-    0%{transform: translateX(0);}
-    50%{transform: translateX(100%);}
-    100%{transform: translateX(0);}
-    
-}
-#ol{
-position: relative;
-top: 550px;
-left: 550px; 
+    padding: 5px;
+    border-radius: 5px;
 }
 
-p{
-    color: orangered; 
+footer a:hover {
+    background-color: #d65f3d;
+}
+
+@keyframes horizontalmove {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+#ol {
+    position: relative;
+    top: 550px;
+    left: 550px;
+}
+
+p {
+    color: var(--main-color);
     font-weight: 100;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-align: left;
+}
 
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px black;
+}
+
+p::first-letter {
+    color: blue;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+ul,
+ol {
+    color: #5f8ca4;
+    font-weight: bold;
+}
+
+.box,
+table {
+    border-radius: 10px;
+}
+
+#Portfolio p:first-of-type {
+    box-shadow: 2px 2px 8px gray;
+    padding: 10px;
 }
